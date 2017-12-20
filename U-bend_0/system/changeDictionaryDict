@@ -1,0 +1,176 @@
+FoamFile
+{
+	version             2.0;
+	format              ascii;
+	class               dictionary;
+	location            "system";
+	object              changeDictionaryDict;
+}
+
+
+p
+{
+	boundaryField
+	{
+		inlet
+		{
+			type	zeroGradient;
+		}
+		outlet
+		{
+			type	fixedValue;
+			value	uniform 0.0;
+		}
+		walls
+		{
+			type	zeroGradient;
+		}
+		empty
+		{
+			type	empty;
+		}
+		detachment1
+		{
+			type	zeroGradient;
+		}
+		detachment2
+		{
+			type	zeroGradient;
+		}
+	}
+}
+
+
+U
+{
+	boundaryField
+	{
+		inlet
+		{
+			type	surfaceNormalFixedValue;
+			refValue	uniform -8.8;
+		}
+		outlet
+		{
+			type	pressureInletOutletVelocity;
+		}
+		walls
+		{
+			type	noSlip;
+		}
+		empty
+		{
+			type	empty;
+		}
+		detachment1
+		{
+			type	noSlip;
+		}
+		detachment2
+		{
+			type	noSlip;
+		}
+	}
+}
+
+
+k
+{
+	boundaryField
+	{
+		inlet
+		{
+			type	turbulentIntensityKineticEnergyInlet;
+			intensity	0.05;
+		}
+		outlet
+		{
+			type	inletOutlet;
+			inletValue	uniform 1.0;
+		}
+		walls
+		{
+			type	kqRWallFunction;
+		}
+		empty
+		{
+			type	empty;
+		}
+		detachment1
+		{
+			type	kqRWallFunction;
+		}
+		detachment2
+		{
+			type	kqRWallFunction;
+		}
+	}
+}
+
+
+omega
+{
+	boundaryField
+	{
+		inlet
+		{
+			type	turbulentMixingLengthFrequencyInlet;
+			mixingLength	0.001;
+		}
+		outlet
+		{
+			type	inletOutlet;
+			inletValue	uniform 1.0;
+		}
+		walls
+		{
+			type	omegaWallFunction;
+		}
+		empty
+		{
+			type	empty;
+		}
+		detachment1
+		{
+			type	omegaWallFunction;
+		}
+		detachment2
+		{
+			type	omegaWallFunction;
+		}
+	}
+}
+
+
+nut
+{
+	boundaryField
+	{
+		inlet
+		{
+			type	calculated;
+		}
+		outlet
+		{
+			type	calculated;
+		}
+		walls
+		{
+			type	nutUWallFunction;
+		}
+		empty
+		{
+			type	empty;
+		}
+		detachment1
+		{
+			type	nutUWallFunction;
+		}
+		detachment2
+		{
+			type	nutUWallFunction;
+		}
+	}
+}
+
+

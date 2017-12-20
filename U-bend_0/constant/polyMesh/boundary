@@ -1,0 +1,47 @@
+FoamFile
+{
+	version	2.0;
+	format	ascii;
+	class	dictionary;
+	location	"constant/polyMesh";
+	object	boundary;
+}
+6
+(
+inlet
+{
+	type	patch;
+	startFace	214075;
+	nFaces	65;
+}
+outlet
+{
+	type	patch;
+	startFace	214140;
+	nFaces	65;
+}
+walls
+{
+	type	wall;
+	startFace	214205;
+	nFaces	3172;
+}
+empty
+{
+	type	empty;
+	startFace	217377;
+	nFaces	215800;
+}
+detachment1
+{
+	type	wall;
+	startFace	433177;
+	nFaces	74;
+}
+detachment2
+{
+	type	wall;
+	startFace	433251;
+	nFaces	74;
+}
+)

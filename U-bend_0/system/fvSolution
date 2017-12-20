@@ -1,0 +1,92 @@
+FoamFile
+{
+	version	2.0;
+	class	dictionary;
+	format	ascii;
+	location	"system";
+	object	fvSolution;
+}
+solvers
+{
+	p
+	{
+		smoother	GaussSeidel;
+		relTol	0.1;
+		cacheAgglomeration	true;
+		nFinestSweeps	2;
+		maxIter	100;
+		nPreSweeps	0;
+		nPostSweeps	1;
+		agglomerator	faceAreaPair;
+		nCellsInCoarsestLevel	10;
+		tolerance	1.0E-6;
+		mergeLevels	1;
+		solver	GAMG;
+	}
+	U
+	{
+		relTol	0.1;
+		preconditioner	DILU;
+		tolerance	1.0E-6;
+		maxIter	100;
+		solver	PBiCGStab;
+	}
+	omega
+	{
+		relTol	0.1;
+		preconditioner	DILU;
+		tolerance	1.0E-6;
+		maxIter	100;
+		solver	PBiCGStab;
+	}
+	k
+	{
+		relTol	0.1;
+		preconditioner	DILU;
+		tolerance	1.0E-6;
+		maxIter	100;
+		solver	PBiCGStab;
+	}
+	Phi
+	{
+		solver	GAMG;
+		smoother	GaussSeidel;
+		nPreSweeps	0;
+		nPostSweeps	1;
+		nFinestSweeps	1;
+		nCellsInCoarsestLevel	10;
+		mergeLevels	2;
+		agglomerator	faceAreaPair;
+		cacheAgglomeration	true;
+		tolerance	1.0E-8;
+		relTol	0.01;
+		maxIter	100;
+	}
+}
+SIMPLE
+{
+	nNonOrthogonalCorrectors	1;
+	consistent	true;
+	pRefCell	0;
+	pRefValue	0.0;
+	residualControl
+	{
+		p	1.0E-6;
+		k	1.0E-6;
+		U	1.0E-6;
+		omega	1.0E-6;
+	}
+}
+relaxationFactors
+{
+	p	0.75;
+	k	0.5;
+	U	0.75;
+	omega	0.5;
+}
+potentialFlow
+{
+	nNonOrthogonalCorrectors	10;
+	PhiRefCell	0;
+	PhiRefValue	0.0;
+}
