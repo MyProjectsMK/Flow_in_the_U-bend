@@ -3,4 +3,4 @@ The repository contains an OpenFOAM case (U-bend_0) dedicated to perform CFD sim
 <br><br>
 
 ## Structure of the repository
-![Figure 1]()
+![Figure 1](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/case_structure.jpg)
