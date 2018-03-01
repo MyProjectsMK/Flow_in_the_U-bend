@@ -38,3 +38,5 @@ Mesh consists of hex type elements. It is thickened near walls in order to more 
 ![Figure 5](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/results_velocity.png)
 
 ![Figure 6](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/detachment_point_position.png)
+
+![Figure 7](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/results_spreadsheet.png)
