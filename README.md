@@ -35,8 +35,13 @@ Mesh consists of hex type elements. It is thickened near walls in order to more 
 <br><br>
 
 ## Results
+Velocity of flow in the U-bend visualized using ParaView:
 ![Figure 5](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/results_velocity.png)
+<br><br>
 
+Graph of the detachment points created by the *detachment_point.py* script:
 ![Figure 6](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/detachment_point_position.png)
+<br><br>
 
+Spreadsheet with some results of CFD simulations created by the *detachment_point.py* script:
 ![Figure 7](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/results_spreadsheet.png)
