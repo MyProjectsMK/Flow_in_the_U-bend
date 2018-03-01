@@ -17,13 +17,19 @@ The *U-bend_3D_fineMesh_0* folder contains the following folders:
 * *0* - boundary conditions
 * *constant* - mesh and some solver settings
 * *system* - the rest of solver settings.
+<br><br>
 
 ## Geometry and BCs
+3D model of the U-bend:
 ![Figure 2](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/3D_model.jpg)
 
+Boundary conditions:
 ![Figure 3](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/3D_model_BCs.jpg)
 
+*Inlet* stands for velocity inlet, *outlet* stands for pressure outlet. *Detachment 1* and *detachment 2* are 'wall' type BCs created in order to detect the point of flow separation from an inner wall of the U-Bend.
+
 ## Mesh
+Mesh consists of hex type elements. It is thickened near walls in order to more precisely simulate boundary layer.
 ![Figure 4](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/mesh.png)
 
 ## Results
