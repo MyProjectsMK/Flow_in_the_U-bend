@@ -47,4 +47,3 @@ Graph of the detachment points obtained in several CFD simulations. The figure w
 Spreadsheet containing coordinates of the detachment points obtained in several CFD simulations and values of turbulence model's coefficients used in respective cases. The file was created by the *detachment_point.py* script:
 <br><br>
 ![Figure 7](https://github.com/MyProjectsMK/Flow_in_the_U-bend/blob/master/README_pictures/results_spreadsheet.png)
-x
